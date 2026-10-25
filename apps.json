@@ -1,0 +1,16 @@
+{
+ "apps": [
+  {
+   "id": "2026-10-25-cardbox",
+   "date": "2026-10-25",
+   "painId": "p-073",
+   "name": "Cardbox",
+   "demo_url": "https://judmir.github.io/scout-apps/2026-10-25-cardbox/demo/",
+   "demo_reason": null,
+   "landing_url": "https://judmir.github.io/scout-apps/2026-10-25-cardbox/landing/",
+   "landing_reason": null,
+   "poc_commit": "1cd6c2d",
+   "published_at": "2026-10-25T07:58:54Z"
+  }
+ ]
+}
