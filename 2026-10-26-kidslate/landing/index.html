@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; script-src 'unsafe-inline'; img-src data:; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<title>KidSlate: Every kid, every team app, one schedule. Paste each team&#x27;s calendar li (preview)</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%238b5cf6'/%3E%3Crect x='8' y='9' width='16' height='14' rx='3' fill='%23f3f2f7'/%3E%3Crect x='11' y='13' width='10' height='2' rx='1' fill='%23fb923c'/%3E%3C/svg%3E">
+<style>
+:root{--bg:#0e0e11;--tile:#18181d;--tile2:#202027;--line:rgba(255,255,255,.07);--text:#f3f2f7;--muted:#9b99a8;--faint:#6c6a78;--violet:#a78bfa;--violet2:#8b5cf6;--vsoft:rgba(167,139,250,.14);--orange:#fb923c;--osoft:rgba(251,146,60,.14);--r:24px;
+--sans:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;--serif:ui-serif,"Iowan Old Style","Palatino Linotype",Georgia,serif}
+*{box-sizing:border-box}html,body{margin:0;background:var(--bg);color:var(--text);font-family:var(--sans);-webkit-font-smoothing:antialiased}
+body{line-height:1.5;font-size:16px}button{font:inherit;color:inherit;border:0;cursor:pointer}
+.wrap{max-width:1080px;margin:0 auto;padding:max(16px,env(safe-area-inset-top)) 20px 64px}
+.top{display:flex;align-items:center;justify-content:space-between;gap:12px;height:52px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:750;font-size:19px;letter-spacing:-.02em}
+.mark{width:30px;height:30px;border-radius:9px;background:linear-gradient(135deg,var(--violet2),var(--violet));position:relative}
+.mark:after{content:"";position:absolute;left:8px;right:8px;top:13px;height:3px;border-radius:2px;background:var(--orange)}
+.tag{display:inline-flex;align-items:center;gap:7px;height:30px;padding:0 12px;border-radius:999px;background:var(--osoft);border:1px solid rgba(251,146,60,.35);color:#fdba74;font-size:12.5px;font-weight:650;white-space:nowrap}
+.tag i{width:7px;height:7px;border-radius:9px;background:var(--orange)}
+.hero{display:grid;gap:28px;padding:34px 0 10px}
+@media(min-width:900px){.hero{grid-template-columns:1.15fr .85fr;align-items:center;padding:64px 0 28px}}
+.eyebrow{color:var(--violet);font-weight:650;font-size:14px;letter-spacing:.01em;margin:0 0 14px}
+h1{font-family:var(--serif);font-weight:600;font-size:clamp(30px,7.6vw,52px);line-height:1.1;letter-spacing:-.02em;margin:0}
+h1 .q{color:var(--violet)}
+.who{color:var(--faint);font-size:14px;margin:12px 0 0}
+.sub{color:var(--muted);font-size:clamp(17px,2.2vw,19px);margin:18px 0 0;max-width:36em}
+.cta{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:26px 0 0}
+.btn{height:52px;padding:0 22px;border-radius:999px;font-weight:700;font-size:16px;white-space:nowrap}
+.btn.main{background:var(--violet);color:#16111f;box-shadow:0 10px 30px -12px rgba(167,139,250,.6)}
+.btn.main:active{transform:translateY(1px)}
+.btn.soft{background:var(--tile);border:1px solid var(--line)}
+.note{color:var(--faint);font-size:13.5px;margin:12px 0 0}
+.price{color:var(--muted);font-size:14px;margin:8px 0 0}.price b{color:var(--text)}
+.demo{background:var(--tile);border:1px solid var(--line);border-radius:var(--r);padding:18px}
+.steps{list-style:none;margin:0;padding:0;display:grid;gap:10px;counter-reset:s}
+.steps li{display:flex;gap:12px;align-items:flex-start;background:var(--tile2);border-radius:16px;padding:12px 14px;font-size:15px;color:var(--muted)}
+.steps li:before{counter-increment:s;content:counter(s);flex:none;width:26px;height:26px;border-radius:99px;display:grid;place-items:center;background:var(--vsoft);color:var(--violet);font-weight:700;font-size:13px}
+.steps li b{color:var(--text);font-weight:650}
+.demo h3{margin:2px 4px 12px;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--faint);font-weight:650}
+.promise{display:flex;flex-wrap:wrap;gap:8px;margin:28px 0 0}
+.promise span{height:34px;display:inline-flex;align-items:center;padding:0 14px;border-radius:999px;background:var(--vsoft);color:var(--violet);font-weight:600;font-size:14px}
+.promise span.o{background:var(--osoft);color:#fdba74}
+h2{font-size:22px;letter-spacing:-.01em;margin:46px 0 14px}
+.grid{display:grid;gap:12px}@media(min-width:760px){.grid{grid-template-columns:repeat(3,1fr)}}
+.card{background:var(--tile);border:1px solid var(--line);border-radius:var(--r);padding:20px}
+.card .n{width:34px;height:34px;border-radius:11px;background:var(--osoft);color:var(--orange);display:grid;place-items:center;font-weight:750;margin-bottom:12px}
+.card h4{margin:0 0 6px;font-size:17px}.card p{margin:0;color:var(--muted);font-size:15px}
+.final{margin:46px 0 0;text-align:center;background:linear-gradient(135deg,rgba(167,139,250,.16),rgba(251,146,60,.10));border:1px solid rgba(167,139,250,.25);border-radius:28px;padding:30px 20px}
+.final h3{margin:0;font-size:24px;letter-spacing:-.01em}.final .cta{justify-content:center}
+details{margin:40px 0 0;background:var(--tile);border:1px solid var(--line);border-radius:18px;padding:14px 18px;color:var(--muted);font-size:14px}
+summary{cursor:pointer;color:var(--text);font-weight:600}details p{margin:10px 0 0}
+footer{color:var(--faint);font-size:13px;margin:30px 0 0;text-align:center}
+.toast{position:fixed;left:50%;bottom:max(22px,env(safe-area-inset-bottom));transform:translate(-50%,30px);opacity:0;pointer-events:none;transition:.25s;width:min(420px,calc(100% - 32px));background:#24232c;border:1px solid rgba(167,139,250,.35);border-radius:20px;padding:16px 18px;box-shadow:0 20px 50px -20px #000}
+.toast.on{opacity:1;transform:translate(-50%,0);pointer-events:auto}
+.toast b{display:block;font-size:17px;margin-bottom:4px}.toast p{margin:0;color:var(--muted);font-size:14px}
+.toast button{margin-top:12px;height:38px;padding:0 16px;border-radius:999px;background:var(--tile2);font-weight:600;font-size:14px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top"><div class="brand"><span class="mark"></span>KidSlate</div><span class="tag" data-preview-tag><i></i>Preview, not launched</span></header>
+  <section class="hero">
+    <div>
+      <p class="eyebrow">From a real review</p>
+      <h1><span class="q">“</span>When there are changes to the games, why in the heck doesn’t the app tell me? I have to check it manually constantly.<span class="q">”</span></h1>
+      <p class="who">A real user complaint (SportsEngine Tourney, US App Store), quoted as written</p>
+      <p class="sub">Every kid, every team app, one schedule. Paste each team's calendar link once and get a push the moment a game moves. Works on Android, iPhone and the web.</p>
+      <div class="cta"><button type="button" class="btn main" data-cta="main">Start for $3.99/month</button><button type="button" class="btn soft" data-cta="soft">Join waitlist</button></div>
+      <p class="price"><b>$3.99/month</b> · or $29.99/year) for the whole family</p>
+      <p class="note">In development, join early access.</p>
+    </div>
+    <aside class="demo"><h3>How it works</h3><ol class="steps"><li><span>Three team-app icons (TeamSnap, GameChanger, Heja) with a "Copy calendar link" tap.</span></li><li><span>Paste into <b>KidSlate</b> → "Maya · U10 Soccer" and "Leo · 12U Baseball" appear in two colors.</span></li><li><span>One week view fills up; a red "overlap Sat 10:00" flag shows.</span></li><li><span>A phone lock screen gets a push: "Leo's game moved to 11:30, Field 4."</span></li></ol></aside>
+  </section>
+  <div class="promise"><span>All teams in one place</span><span>Know the second a game moves</span><span>Setup in a minute</span><span>No logins</span><span class="o">$3.99/month</span></div>
+  <h2>Why KidSlate</h2>
+  <div class="grid"><div class="card"><div class="n">1</div><h4>All teams in one place</h4><p>TeamSnap, GameChanger, SportsEngine, Heja and more, color-coded by kid, right in the calendar you already use.</p></div><div class="card"><div class="n">2</div><h4>Know the second a game moves</h4><p>A push alert when a game or practice is moved, added or cancelled, plus a flag when two kids need you in two places.</p></div><div class="card"><div class="n">3</div><h4>Setup in a minute, no logins</h4><p>Paste a link, or snap a screenshot of any schedule. Grandparents follow along free.</p></div></div>
+  <section class="final"><h3>Paste each team's calendar link once (TeamSnap, GameChanger, SportsEngine, LeagueApps, Heja…), or snap a screenshot of a schedule that has no link, and every kid's games and practices land in one color-coded schedule in your phone calendar</h3><div class="cta"><button type="button" class="btn main" data-cta="main">Start for $3.99/month</button><button type="button" class="btn soft" data-cta="soft">Join waitlist</button></div><p class="note">In development, join early access.</p></section>
+  <details><summary>Preview notes (validation test, not shown to visitors)</summary><p><b>Ad angle:</b> a 10-second phone screen recording: three team apps → one color-coded week → a "game moved" push. Hook: "Two kids, three team apps, one missed game? Get every game in one schedule." Target US parents 30–50 with youth-sports interests (TeamSnap, GameChanger, Little League, AYSO, club soccer), Android and iPhone; run in-season (now: fall soccer/basketball start).</p><p><b>Test:</b> Two-button validation page (below) with <b>"Start for $3.99/month"</b> and a softer waitlist link, plus €30–50 of Meta ads to US parents of school-age kids with youth-sports interests (TeamSnap, GameChanger, Little League, AYSO, club soccer). Bar: 100+ US visitors; &gt;3% price clicks strong, &lt;1% kill. Also, before building: check by hand which of TeamSnap, GameChanger, SportsEngine, LeagueApps, Heja, TeamLinkt and sportsYou give parents a subscribable feed link (an hour of work, decides how much the screenshot fallback matters).</p><p><b>Source:</b> brief 2026-10-26, pain p-100. Prices are estimates. The real test page would add a fake checkout and a waitlist; this preview deliberately has neither.</p></details>
+  <footer>Preview built 2026-10-26 from the night's brief · nothing here is live: no sign-up, no payment, no tracking. Clicks are saved only in this browser.</footer>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"><b>Not launched yet</b><p id="toastp"></p><button type="button" id="toastx">OK</button></div>
+<script>
+(function(){
+  var KEY = 'scout.landing.2026-10-26-kidslate.clicks';
+  var t = document.getElementById('toast'), tp = document.getElementById('toastp'), timer;
+  function read(){ try { return JSON.parse(localStorage.getItem(KEY) || '[]'); } catch (e) { return []; } }
+  document.addEventListener('click', function(e){
+    var b = e.target.closest('[data-cta]'); if (!b) return;
+    var list = read(); list.push({ button: b.getAttribute('data-cta'), label: b.textContent.trim(), at: new Date().toISOString() });
+    try { localStorage.setItem(KEY, JSON.stringify(list)); } catch (e) {}
+    tp.textContent = '“' + b.textContent.trim() + '” isn’t open yet. Nothing was charged or sent; this click is saved only in this browser (' + list.length + ' so far).';
+    t.classList.add('on'); clearTimeout(timer); timer = setTimeout(function(){ t.classList.remove('on'); }, 6000);
+  });
+  document.getElementById('toastx').addEventListener('click', function(){ t.classList.remove('on'); });
+})();
+</script>
+</body>
+</html>

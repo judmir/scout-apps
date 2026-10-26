@@ -11,6 +11,18 @@
    "landing_reason": null,
    "poc_commit": "1cd6c2d",
    "published_at": "2026-10-25T08:04:18Z"
+  },
+  {
+   "id": "2026-10-26-kidslate",
+   "date": "2026-10-26",
+   "painId": "p-100",
+   "name": "KidSlate",
+   "demo_url": "https://judmir.github.io/scout-apps/2026-10-26-kidslate/demo/",
+   "demo_reason": null,
+   "landing_url": "https://judmir.github.io/scout-apps/2026-10-26-kidslate/landing/",
+   "landing_reason": null,
+   "poc_commit": "776f77f",
+   "published_at": "2026-10-26T04:16:32Z"
   }
  ]
 }
