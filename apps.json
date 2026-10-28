@@ -35,6 +35,18 @@
    "landing_reason": null,
    "poc_commit": "ac1a751",
    "published_at": "2026-10-27T04:20:45Z"
+  },
+  {
+   "id": "2026-10-28-schoolsift",
+   "date": "2026-10-28",
+   "painId": "p-086",
+   "name": "SchoolSift",
+   "demo_url": "https://judmir.github.io/scout-apps/2026-10-28-schoolsift/demo/",
+   "demo_reason": null,
+   "landing_url": "https://judmir.github.io/scout-apps/2026-10-28-schoolsift/landing/",
+   "landing_reason": null,
+   "poc_commit": "40248d4",
+   "published_at": "2026-10-28T04:13:56Z"
   }
  ]
 }
